@@ -1,0 +1,87 @@
+/* E:\1落地页\落地页\山水云\shanshuicloud.click\style.css */
+:root {
+    --tech-blue: #0052CC;
+    --tech-blue-hover: #0043A6;
+    --bg-light: #F4F5F7;
+    --text-main: #172B4D;
+    --text-muted: #5E6C84;
+    --border: #DFE1E6;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: white;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+a { text-decoration: none; color: var(--tech-blue); }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+/* Clean SaaS Header */
+.top-nav { position: sticky; top: 0; z-index: 1000; padding: 15px 0; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.logo-block { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 24px; color: var(--text-main); }
+.logo-icon { width: 32px; height: 32px; }
+.main-menu { display: flex; gap: 25px; align-items: center; }
+.main-menu a { color: var(--text-muted); font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
+.main-menu a:hover { color: var(--tech-blue); }
+.btn-nav-cta { background: var(--tech-blue); color: white; padding: 8px 20px; border-radius: 4px; font-weight: 700; font-size: 0.9rem; transition: 0.2s; }
+.btn-nav-cta:hover { background: var(--tech-blue-hover); color: white; box-shadow: 0 4px 12px rgba(0,82,204,0.3); }
+@media (max-width: 768px) { .main-menu { display: none; } }
+
+/* Hero */
+.hero-clean { padding: 100px 0; background: linear-gradient(180deg, var(--bg-light) 0%, white 100%); text-align: center; }
+.hero-clean h1 { font-size: 3.5rem; letter-spacing: -1px; margin: 0 0 20px; font-weight: 800; color: var(--text-main); }
+.hero-clean p { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px; }
+
+/* Buttons */
+.btn-saas { display: inline-block; padding: 14px 28px; font-size: 1rem; font-weight: 600; border-radius: 4px; transition: background 0.2s, box-shadow 0.2s; margin: 0 10px; }
+.btn-primary { background: var(--tech-blue); color: white; border: none; }
+.btn-primary:hover { background: var(--tech-blue-hover); color: white; box-shadow: 0 4px 12px rgba(0,82,204,0.3); }
+.btn-seo { background: white; color: var(--text-main); border: 1px solid var(--border); }
+.btn-seo:hover { background: var(--bg-light); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+/* Section Standard */
+.section { padding: 80px 0; }
+.section-head { text-align: center; margin-bottom: 50px; }
+.section-head h2 { font-size: 2.2rem; margin: 0 0 10px; }
+.section-head p { color: var(--text-muted); font-size: 1.1rem; }
+
+/* Precision Grid */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.saas-card {
+    background: white; border: 1px solid var(--border); border-radius: 8px; padding: 30px;
+    box-shadow: 0 1px 3px rgba(9, 30, 66, 0.05); transition: transform 0.2s, box-shadow 0.2s;
+}
+.saas-card:hover { transform: translateY(-3px); box-shadow: 0 8px 16px rgba(9, 30, 66, 0.1); }
+.icon-wrap { width: 48px; height: 48px; background: var(--bg-light); border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.saas-card h3 { font-size: 1.2rem; margin: 0 0 10px; }
+.saas-card p { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
+
+/* Pricing */
+.pricing-tier { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; background: white; }
+.pricing-tier.popular { border: 2px solid var(--tech-blue); transform: scale(1.02); box-shadow: 0 12px 24px rgba(0,82,204,0.1); }
+.tier-head { padding: 30px; text-align: center; border-bottom: 1px solid var(--border); background: var(--bg-light); }
+.pricing-tier.popular .tier-head { background: #E6F0FF; }
+.tier-name { font-size: 1.1rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 10px; }
+.tier-price { font-size: 3rem; font-weight: 800; color: var(--text-main); margin-bottom: 15px; }
+.tier-body { padding: 30px; flex: 1; }
+.tier-body ul { list-style: none; padding: 0; margin: 0 0 30px; }
+.tier-body li { padding: 10px 0; color: var(--text-main); display: flex; align-items: center; gap: 10px; font-size: 0.95rem; border-bottom: 1px solid var(--bg-light); }
+.tier-body li::before { content: '✓'; color: var(--tech-blue); font-weight: bold; }
+
+/* Simple Footer */
+.footer-clean { border-top: 1px solid var(--border); padding: 40px 0; margin-top: 60px; }
+.footer-links { display: flex; justify-content: center; gap: 30px; }
+.footer-links a { color: var(--text-muted); font-size: 0.9rem; }
+.footer-links a:hover { color: var(--tech-blue); }
+
+@media (max-width: 768px) {
+    .hero-clean h1 { font-size: 2.2rem; }
+    .btn-saas { display: block; width: 100%; margin: 10px 0; }
+    .pricing-tier.popular { transform: none; }
+}
+
+.article-body a { color: #0052CC; text-decoration: underline; font-weight: bold; }
+.article-body a:visited { color: #0052CC; }
